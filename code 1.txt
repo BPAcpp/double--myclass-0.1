@@ -132,7 +132,7 @@ int main() {
 
     dabla c(0, 0);
 
-    c = b + a + a;
+    c = a+a+a+a+a+a+a+a+a+a;
     cout << c.for_cout_s(c);
 
 
