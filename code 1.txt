@@ -64,7 +64,7 @@ public:
 
 
 
-    dabla& operator+(dabla& b)
+    dabla operator+(dabla& b)
     {
         dabla temp;
 
@@ -106,7 +106,7 @@ public:
     }
 
 
-    string for_cout_s(dabla a) {
+    string cout_state(dabla a) {
         this->transformate(a);
         return to_string(this->a) + "." + to_string(this->b);
     }
@@ -116,7 +116,7 @@ public:
         return c == b;
 
     }
-protected:
+private:
     int a = 0;
     int b = 0;
     double c = 0;
@@ -132,10 +132,10 @@ int main() {
 
     dabla c(0, 0);
 
-    c = a+a+a+a+a+a+a+a+a+a;
-    cout << c.for_cout_s(c);
+    c = a + a+a;
+    cout << c.cout_state(c);
 
-
+    
 
 
     double qwerty = 1;
@@ -146,8 +146,3 @@ int main() {
 
     return 0;
 }
-
-
-
-
-
